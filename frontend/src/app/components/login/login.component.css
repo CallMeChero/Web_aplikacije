@@ -1,0 +1,16 @@
+
+	/* unvisited link */
+	small>a:link {
+	    color: blue;
+	}
+
+	/* visited link */
+	small>a:visited {
+	    color: blue;
+	}
+
+	/* mouse over link */
+	small>a:hover {
+	    color: red;
+	    font-size: 20px;
+	}
