@@ -29,3 +29,7 @@ body {
 .ng-valid:not(form) {
 	border: 2px solid green;
 }
+.mb-5>a:hover {
+	color: green;
+	font-size: 20px;
+}
