@@ -1,0 +1,12 @@
+
+<nav class="navbar navbar-dark bg-dark justify-content-between">
+  <a class="navbar-item">
+    <img src={{fullImgPath}} class="image" />
+  </a>
+  <div>
+    <a class="btn btn-outline-success my-2 my-sm-0" routerLink="login" *ngIf="!loggedIn">Login</a>
+    <a class="btn btn-outline-success my-2 my-sm-0" href="#" (click)="logout($event)" *ngIf="loggedIn">Logout</a>
+    <a class="btn btn-outline-success my-2 my-sm-0" routerLink="profile" *ngIf="loggedIn">Profile</a>
+  </div>
+
+</nav>

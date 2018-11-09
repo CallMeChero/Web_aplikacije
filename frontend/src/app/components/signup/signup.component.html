@@ -1,0 +1,48 @@
+<div class="card bg-light mb-3" style="max-width: 25rem; min-height: 465px; border:0;">
+  <form #signupForm="ngForm" (ngSubmit)="onSubmit()">
+
+  	<div style="background-color: #343a40; min-height: 38px;">
+  		<h1 style="text-align: center; color: white; font-size: 15px;padding-top:5px;">Sign up</h1>
+  	</div>
+
+	  <div class="form-group">
+	  	<div class="form-group col-md-12">
+	      <label for="inputName4">Name</label>
+	      <input type="text" class="form-control" name= "name" id="inputName4" [(ngModel)]="form.name" placeholder="Enter your name" required>
+	      <div class="alert alert-danger" role="alert" [hidden]="!error.name">
+  			<strong>Zrak u ruke!</strong> {{ error.name }}
+	  	  </div>
+	    </div>
+
+	    <div class="form-group col-md-12">
+	      <label for="inputEmail4">Email</label>
+	      <input type="email" class="form-control" name= "email" id="inputEmail4" [(ngModel)]="form.email" placeholder="Enter your email" required>
+	      <div class="alert alert-danger" role="alert" [hidden]="!error.email">
+  			<strong>Zrak u ruke!</strong> {{ error.email }}
+	  	  </div>
+	    </div>
+
+	    <div class="form-group col-md-12">
+	      <label for="inputPassword4">Password</label>
+	      <input type="password" class="form-control" name="password" id="inputPassword4" [(ngModel)]="form.password" placeholder="Enter your password" required>
+	      <div class="alert alert-danger" role="alert" [hidden]="!error.password">
+  			<strong>Zrak u ruke!</strong> {{ error.password }}
+	  	  </div>
+	    </div>
+
+	    <div class="form-group col-md-12">
+	      <label for="inputPasswordConfirmation4">Password Confimation</label>
+	      <input type="password" class="form-control" name="password_confirmation" id="inputPasswordConfirmation4" [(ngModel)]="form.password_confirmation" placeholder="Enter your password" required>
+	      <div class="alert alert-danger" role="alert" [hidden]="!error.password_confirmation">
+  			<strong>Zrak u ruke!</strong> {{ error.password_confirmation }}
+	  	  </div>
+	    </div>
+
+	    <div class="form-group col-md" style="background-color: #343a40; margin-bottom: 0">
+	     <button type="submit" class="btn btn-primary" [disabled]="!signupForm.valid" >Sign up</button>
+	     <a class="btn btn-primary" style="float:right;"  routerLink="/login">Take me back to login!</a>
+	    </div>
+	  </div>
+
+  </form>
+</div>
