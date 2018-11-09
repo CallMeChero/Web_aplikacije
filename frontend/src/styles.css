@@ -30,6 +30,6 @@ body {
 	border: 2px solid green;
 }
 .mb-5>a:hover {
-	color: green;
+	color: #17a2b8;
 	font-size: 20px;
 }
