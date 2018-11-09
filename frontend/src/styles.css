@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.css';
-@import "~ng-snotify/styles/material.css";
+@import "~ng-snotify/styles/dark.css";
 
 body { 
  background: url('https://picsum.photos/g/1800/970/?random') no-repeat center center fixed; 
