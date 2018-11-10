@@ -29,7 +29,19 @@ body {
 .ng-valid:not(form) {
 	border: 2px solid green;
 }
-.mb-5>a:hover {
-	color: #17a2b8;
-	font-size: 20px;
+/* ovo nisam ocekivao, no lijepo ispalo */
+button:disabled,
+button[disabled]{
+  background: url('https://picsum.photos/g/1800/970/?random') no-repeat center center fixed;
+  -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover; 
+}
+
+
+/* krpanje fronta */
+
+div.mb-5>a:nth-child(even) {
+    color: #17a2b8;;   
 }

@@ -2,7 +2,7 @@
   <div style="background-color: #343a40; min-height: 38px;">
   	<h1 style="text-align: center; color: white; font-size: 15px;padding-top:5px;">Login</h1>
   </div>
-  <form #loginForm="ngForm" (ngSubmit)="onSubmit()" style="border-bottom:0px;">
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
 
 	  <div class="alert alert-danger" role="alert" [hidden]="!error" style="max-height: 40px">
   		<strong>Zrak u ruke!</strong> {{ error }}
