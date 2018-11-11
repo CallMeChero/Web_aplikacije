@@ -1,15 +1,52 @@
 /* unvisited link */
 small>a:link {
-    color: blue;
+    color: #3CB371;
+    font-size: 15px;
 }
 
 /* visited link */
 small>a:visited {
-    color: blue;
+    color: #3CB371;
 }
 
 /* mouse over link */
 small>a:hover {
     color: #17a2b8;
-    font-size: 20px;
+    font-size: 18px;
+}
+
+
+.mineCard {
+	max-width: 30em; 
+	max-height: 242px; 
+	border: 0;
+	margin-bottom: 0;
+}
+
+.topContainer {
+	background-color: #343a40; 
+	min-height: 38px;
+}
+
+.mineCol {
+	padding: 17px 0;
+}
+
+.mineButtonCol {
+	padding-top:0px; 
+	background-color: #343a40;
+} 
+.mineHeader {
+	text-align: center; 
+	color: white; 
+	font-size: 15px;
+	padding-top:5px;
+} 
+
+div.passwordCol {
+	 background: url('https://picsum.photos/g/1800/970/?random') no-repeat center center fixed; 
+	 -webkit-background-size: cover;
+	 -moz-background-size: cover;
+	 -o-background-size: cover;
+	 background-size: cover;
 }

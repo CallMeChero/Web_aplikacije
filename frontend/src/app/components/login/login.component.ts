@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
   onSubmit() {
   	this.handler.logIn(this.form).subscribe(
   			data => this.responseData(data),
-  			error => this.responseError(error)
+  			error => this.snotify.error(error.error.error)
   		);
   }
 
@@ -39,10 +39,6 @@ export class LoginComponent implements OnInit {
     this.auth.changeAuthentication(true);
     this.router.navigateByUrl('/profile');
     this.snotify.success('You have successfully signed in!');
-  }
-
-  responseError(error) {
-    this.error = error.error.error;
   }
 
   ngOnInit() {

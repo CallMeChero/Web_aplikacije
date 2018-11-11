@@ -2,6 +2,9 @@
 @import '~bootstrap/dist/css/bootstrap.css';
 @import "~ng-snotify/styles/dark.css";
 
+* {
+    overflow: hidden;
+}
 body { 
  background: url('https://picsum.photos/g/1800/970/?random') no-repeat center center fixed; 
  -webkit-background-size: cover;
@@ -44,4 +47,43 @@ button[disabled]{
 
 div.mb-5>a:nth-child(even) {
     color: #17a2b8;;   
+}
+
+.fa-lg {
+  line-height: 1em;
+}
+
+.mineFooter {
+  width: 500px;
+  height: 200px;
+  position: absolute;
+  top: 80%;
+  left: 37%;
+}
+
+nav>div {
+  list-style-type:none;
+  padding:0;
+}
+nav>a {
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  display:block;
+  padding: 5px;
+}
+
+nav>a:hover {
+  background: #555;
+}
+
+@media (min-width: 768px) {
+  nav div{
+    display: flex;
+    justify-content: space-around; /* justify content ne moze ako postoji flex grow ili shrink"*/
+    margin: 0;
+  }
+  nav {
+    justify-content: space-between;
+  }
 }
