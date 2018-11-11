@@ -61,6 +61,8 @@ div.mb-5>a:nth-child(even) {
   left: 37%;
 }
 
+/* nav */
+
 nav>div {
   list-style-type:none;
   padding:0;
@@ -76,6 +78,7 @@ nav>a:hover {
   background: #555;
 }
 
+/* responsive */
 @media (min-width: 768px) {
   nav div{
     display: flex;
