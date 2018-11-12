@@ -17,14 +17,27 @@ class PasswordResetController extends Controller
 		$email = $request->email;
 		if(!$this->validateUser($email)) {
 			return $this->failed();
+		} else if($this->checkIfExists($email)) {
+			return $this->failedForDuplication();
+		} else {
+			$this->sendEmail($email);
+			$this->success();
 		}
-
-		$this->sendEmail($email);
-		$this->success();
 	}
 
 	public function validateUser($email) {
 		return User::where('email','=',$email)->first() ? true : false;
+	}
+
+	public function checkIfExists($email) {
+		$duplicateToken = DB::table('password_resets')->where('email', '=', $email)->first();
+		return $duplicateToken ? true : false;
+	} 
+
+	public function failedForDuplication() {
+		return response()->json([
+				'error' => "Check your mailbox! It's already there!"
+			], Response::HTTP_NOT_FOUND);
 	}
 
 	public function failed() {
@@ -47,11 +60,6 @@ class PasswordResetController extends Controller
 	}
 
 	public function createToken($email) {
-
-		$duplicateToken = DB::table('password_resets')->where('email', '=', $email)->first();
-		if($duplicateToken) {
-			return $duplicateToken;
-		}
 
 		$token = str_random(60);
 		$this->saveToken($token,$email);
