@@ -46,9 +46,16 @@ div.mb-5>a:nth-child(even) {
   width: 500px;
   height: 200px;
   position: absolute;
-  top: 80%;
-  left: 37%;
+  top: 90%;
+  left: 38%;
+  overflow: hidden;
 }
+
+.formGroupButton {
+  background: #343a40;
+  height: 40px;
+}
+
 
 /* nav */
 

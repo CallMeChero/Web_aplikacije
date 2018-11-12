@@ -4,8 +4,9 @@
     <img src={{fullImgPath}} class="image" />
   </a>
   <div class="pull-right">
-    <a class="btn btn-outline-success my-2 my-sm-0" routerLink="login" *ngIf="!loggedIn">Login</a>
-    <a class="btn btn-outline-success my-2 my-sm-0" href="#" (click)="logout($event)" *ngIf="loggedIn">Logout</a>
+    <a class="btn btn-outline-success my-2 my-sm-0" routerLink="login"  *ngIf="!loggedIn" style="margin-right: 15px;">Login</a>
+    <a class="btn btn-outline-success my-2 my-sm-0" routerLink="signup"  *ngIf="!loggedIn">Sign up</a>
+    <a class="btn btn-outline-success my-2 my-sm-0" href="#" (click)="logout($event)" *ngIf="loggedIn" style="margin-right: 15px;">Logout</a>
     <a class="btn btn-outline-success my-2 my-sm-0" routerLink="profile" *ngIf="loggedIn">Profile</a>
   </div>
 

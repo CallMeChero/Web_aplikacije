@@ -51,7 +51,6 @@ export class ResponseResetComponent implements OnInit {
   			}
   		]
   	});
-  	this.route.navigateByUrl('/login');
   }
 
   responseErrors(error) {

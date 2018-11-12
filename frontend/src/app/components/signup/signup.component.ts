@@ -43,6 +43,9 @@ export class SignupComponent implements OnInit {
     this.token.handleToken(data.access_token);
     this.router.navigateByUrl('/profile');
     this.snotify.success('You have successfully signed in!');
+    
+    //zakrpa
+    window.location.reload();
   }
 
   handleError(error) {
