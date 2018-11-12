@@ -1,0 +1,21 @@
+.mineCard {
+	max-width: 30em; 
+	border: 0;
+	margin-bottom: 0;
+}
+
+.topContainer {
+	background-color: #343a40; 
+	min-height: 38px;
+}
+
+.mineCol {
+	padding: 5px;
+}
+
+.mineHeader {
+	text-align: center; 
+	color: white; 
+	font-size: 15px;
+	padding-top:5px;
+} 

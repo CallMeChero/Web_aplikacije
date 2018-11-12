@@ -1,8 +1,10 @@
-<div class="card bg-light mb-3">
-  <div class="card-header">Reset Password</div>
+<div class="card bg-light mb-3 mineCard">
+  <div class="topContainer">
+  	<h1 class="mineHeader">Reset Password</h1>
+  </div>
   <form #resetPassForm="ngForm" (ngSubmit)="onSubmit()">
 
-	  	<div class="form-group col-md-12">
+	  	<div class="form-group col-md-12 mineCol">
 	      <label for="inputEmail4">Email</label>
 	      <input type="email" class="form-control" name= "email" id="inputEmail4" [(ngModel)]="form.email" placeholder="Enter your email" required>
 	      <div class="alert alert-danger" role="alert" [hidden]="!error.email">
@@ -10,7 +12,7 @@
 	  	  </div>
 	    </div>
 
-	    <div class="form-group col-md-12">
+	    <div class="form-group col-md-12 mineCol">
 	      <label for="inputPassword4">Password</label>
 	      <input type="password" class="form-control" name="password" id="inputPassword4" [(ngModel)]="form.password" placeholder="Enter your password" required>
 	      <div class="alert alert-danger" role="alert" [hidden]="!error.password">
@@ -18,7 +20,7 @@
 	  	  </div>
 	    </div>
 
-	    <div class="form-group col-md-12">
+	    <div class="form-group col-md-12 mineCol">
 	      <label for="inputPasswordConfirmation4">Password Confimation</label>
 	      <input type="password" class="form-control" name="password_confirmation" id="inputPasswordConfirmation4" [(ngModel)]="form.password_confirmation" placeholder="Enter your password" required>
 	      <div class="alert alert-danger" role="alert" [hidden]="!error.password_confirmation">
