@@ -1,18 +1,22 @@
 /* unvisited link */
 small>a:link {
-    color: #3CB371;
+    color: #17a2b8;
     font-size: 15px;
+    text-decoration: underline;
 }
 
 /* visited link */
 small>a:visited {
-    color: #3CB371;
+    color: #17a2b8;
 }
 
 /* mouse over link */
 small>a:hover {
-    color: #17a2b8;
-    font-size: 18px;
+    color: #3CB371;
+    text-decoration: none;
+    border: 1px solid #3CB371;
+    border-radius: 16px;
+    padding: 5px;
 }
 
 
