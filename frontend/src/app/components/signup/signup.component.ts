@@ -18,7 +18,8 @@ export class SignupComponent implements OnInit {
   	email: null,
   	name: null,
   	password: null,
-  	password_confirmation: null
+  	password_confirmation: null,
+    g_recaptcha_response: null,
   };
 
   constructor(
@@ -42,7 +43,6 @@ export class SignupComponent implements OnInit {
   handleResponse(data) {
     this.token.handleToken(data.access_token);
     this.router.navigateByUrl('/profile');
-    this.snotify.success('You have successfully signed in!');
     
     //zakrpa
     window.location.reload();
