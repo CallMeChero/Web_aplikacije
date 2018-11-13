@@ -33,9 +33,13 @@ export class JwtTokenService {
   	const token = this.getToken();
   	if(token) {
   		const payload = this.getPayload(token);
+      //zbog provjere expiration date od tokena!
+      var date = new Date;
   		if(payload) {
-        // 1 od ruta se mora poklapati sa payloadom od jtw-a 
-  			return Object.values(this.payloadIss).indexOf(payload.iss) ? true : false;
+        if(date > payload.exp) {
+          // 1 od ruta se mora poklapati sa payloadom od jtw-a 
+          return Object.values(this.payloadIss).indexOf(payload.iss) ? true : false;
+        }
   		}
   	}
   	return false;
